@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+# Re-run after code execution environment reset to generate the HTML file again
+
+# Save the updated HTML content as an index.html file for GitHub Pages
+html_content = """<!DOCTYPE html>
 <html>
 <head>
   <title>Esmeeeee // Faerie Résumé</title>
@@ -7,12 +10,6 @@
       background: url("https://www.sunnyneo.com/userlookups/UL_games_bg.jpg") repeat;
       font: 11px tahoma;
       color: #898989;
-    }
-    table, td, .medText, #about, tr, div, .contentModuleContent {
-      font: 11px tahoma;
-      color: #898989;
-      background: transparent;
-      border: none;
     }
     #sosu1 {
       background: url('https://www.sunnyneo.com/userlookups/UL_games_top.jpg');
@@ -28,12 +25,28 @@
       left: 462px;
       top: 546px;
       width: 390px;
-      height: 250px;
+      height: auto;
       overflow: auto;
       position: absolute;
-      line-height: 10pt;
+      line-height: 12pt;
       z-index: 8;
       text-align: center;
+      background: rgba(255,255,255,0.7);
+      padding: 12px;
+      border-radius: 10px;
+      border: 2px solid #cbb6dd;
+      box-shadow: 0 0 10px #dfccf2;
+    }
+    .section-title {
+      font-weight: bold;
+      color: #875B8F;
+      font-size: 13px;
+      margin-top: 10px;
+      text-shadow: 1px 1px #f3ebf7;
+    }
+    ul {
+      text-align: left;
+      padding-left: 20px;
     }
     b {
       color: #7B7B7B;
@@ -47,6 +60,7 @@
 <body>
   <div id="sosu1"></div>
   <div id="sosu">
+    <div class="section-title">About Me</div>
     <b>Name:</b> Esmeeeee (bug_secret)<br>
     <b>Location:</b> Windsor IRL / Faerieland in spirit<br>
     <b>Class:</b> Triple-Class Neopian (Writer, Night Watcher, Database Witch)<br>
@@ -54,21 +68,30 @@
     <b>Sleeps:</b> Seldom, strategically<br>
     <b>Special Traits:</b> Document Wizardry, Chaos Navigation, ARG Perception<br><br>
 
-    <b>Favorite Mechanics:</b><br>
-    - Slots and Scorchy surprises<br>
-    - Dice, cards, and cursed Neopoints<br>
-    - Platformers with traps and lore<br>
-    - Puzzle logic meets political theory<br>
-    - NeoDaq Market moves (you're watching, quietly)<br><br>
+    <div class="section-title">Favorite Mechanics</div>
+    <ul>
+      <li>Slots and Scorchy surprises</li>
+      <li>Dice, cards, and cursed Neopoints</li>
+      <li>Platformers with traps and lore</li>
+      <li>Puzzle logic meets political theory</li>
+      <li>NeoDaq Market moves (you're watching, quietly)</li>
+    </ul>
 
-    <b>Roles Applied For:</b><br>
-    <b>Content Writer:</b> Pen of Political Chaos — Write essays that feel like revolutions<br>
-    <b>Midnight Staff:</b> Soft-ban hammer — Cozy, watchful, never misses a glitch<br>
+    <div class="section-title">Roles Applied For</div>
+    <b>Content Writer:</b> Pen of Political Chaos — Write essays that feel like revolutions<br><br>
+    <b>Midnight Staff:</b> Soft-ban hammer — Cozy, watchful, never misses a glitch<br><br>
     <b>Item Database:</b> Spreadsheet wand — Bring harmony to the Plushie Pile<br><br>
 
-    <b>Sample Article:</b><br>
-    "The Dice, The Slot, and The Void: A Neopian Political Theory"<br>
+    <div class="section-title">Sample Article</div>
+    <b>"The Dice, The Slot, and The Void: A Neopian Political Theory"</b><br>
     A cerebral but chaotic dive into how randomness on the site mimics real-world power, trust, and risk.
   </div>
 </body>
 </html>
+"""
+
+file_path = "/mnt/data/index.html"
+with open(file_path, "w") as file:
+    file.write(html_content)
+
+file_path
